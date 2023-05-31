@@ -1,40 +1,41 @@
 <script>
 
-  export let weather = {};
+  export let weatherData = {};
 
-  console.log(weather.current.weather[0].description);
+  console.log(weatherData.current.weather[0].description);
 
-  const icon = weather.current.weather[0].icon;
+  const icon = weatherData.current.weather[0].icon;
 
   const iconSrc = `https://openweathermap.org/img/wn/${icon}@2x.png`
 
 </script>
 
 
-<div class="columns is-vcentered">
-  <div class="column box"> 
-    <h1>{weather.current.weather[0].description}</h1>
-    <img alt="weather-icon" src={iconSrc} width="100"/>
+<div class="box">
+  <div class="columns is-vcentered">
+    <div class="column"> 
+      <h3 class="title is-3">{weatherData.current.weather[0].description}</h3>
+      <img alt="weather-icon" src={iconSrc} width="100"/>
+    </div>
+    <div class="column"> 
+      <h5 class="title is-5">Temperature</h5>
+      <h4 class="title is-4">{weatherData.current.temp} C</h4>
+    </div>
+    <div class="column"> 
+      <h5 class="title is-5">Humidity</h5>
+        <h4 class="title is-4">{weatherData.current.humidity}% </h4>
+    </div>
+    <div class="column"> 
+      <h5 class="title is-5">Pressure</h5>
+      <h4 class="title is-4">{weatherData.current.pressure} PA</h4>
+    </div>
+    <div class="column"> 
+      <h5 class="title is-5">Wind speed</h5>
+      <h4 class="title is-4">{weatherData.current.wind_speed} kmph</h4>
+    </div>
+    <div class="column"> 
+      <h5 class="title is-5">Wind direction</h5>
+      <h4 class="title is-4">{weatherData.current.wind_deg} °</h4>
+    </div>
   </div>
-  <div class="column box"> 
-    <h2>Temperature</h2>
-    <h1>{weather.current.temp} C</h1>
-  </div>
-  <div class="column box"> 
-    <h2>Humidity</h2>
-    <h1>{weather.current.humidity}% </h1>
-  </div>
-  <div class="column box"> 
-    <h2>Pressure</h2>
-    <h1>{weather.current.pressure} PA</h1>
-  </div>
-  <div class="column box"> 
-    <h2>Wind speed</h2>
-    <h1>{weather.current.wind_speed} kmph</h1>
-  </div>
-  <div class="column box"> 
-    <h2>Wind direction</h2>
-    <h1>{weather.current.wind_deg} deg</h1>
-  </div>
-
 </div>
