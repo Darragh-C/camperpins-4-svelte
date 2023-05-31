@@ -5,8 +5,8 @@
   <a href="/charts" class="column is-2 mx-2">
     <i class="fas fa-chart-line fa-3x" style="color:turquoise" />
   </a>
-  <a href="/dashboard" class="column is-4">
-    <i class="fas fa-th-list fa-3x" style="color:rgb(63, 122, 139)" />
+  <a href="/weather" class="column is-4">
+    <i class="fas fa-cloud-sun fa-3x" style="color:rgb(63, 122, 139)" />
 </a>
   <a href="/logout" class="column is04">
     <i class="fas fa-sign-out-alt fa-3x" style="color:navy" />

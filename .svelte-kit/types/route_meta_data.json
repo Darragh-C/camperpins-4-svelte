@@ -11,7 +11,7 @@
 		"src/routes/pin/[slug]/+page.server.js"
 	],
 	"/signup": [],
-	"/test": [
-		"src/routes/test/+page.server.js"
+	"/weather": [
+		"src/routes/weather/+page.server.js"
 	]
 }

@@ -1,41 +1,40 @@
 <script>
-  import { onMount } from "svelte";
 
-  /** @type {import('./$types').PageData} */
-  export let data;
-  const { weather } = data
+  export let weather = {};
 
-  //export let lat;
-  //export let long;
-  //let latestWeather = {};
-  //lat, long
+  console.log(weather.current.weather[0].description);
 
-  //onMount(getLatestWeather);
+  const icon = weather.current.weather[0].icon;
 
-  //async function getLatestWeather() {
-  //  latestWeather = await openWeather.getWeather();
-  //  console.log(latestWeather);
-  //}
+  const iconSrc = `https://openweathermap.org/img/wn/${icon}@2x.png`
 
 </script>
 
 
-<div class="columns">
-  <div class="column"> 
-    <p>{weather.current.weather.description}</p>
+<div class="columns is-vcentered">
+  <div class="column box"> 
+    <h1>{weather.current.weather[0].description}</h1>
+    <img alt="weather-icon" src={iconSrc} width="100"/>
   </div>
-  <div class="column"> 
-    <p>{weather.current.temp}</p>
+  <div class="column box"> 
+    <h2>Temperature</h2>
+    <h1>{weather.current.temp} C</h1>
   </div>
-  <div class="column"> 
-    <p>{weather.current.humidity}</p>
+  <div class="column box"> 
+    <h2>Humidity</h2>
+    <h1>{weather.current.humidity}% </h1>
   </div>
-  <div class="column"> 
-    <p>{weather.current.pressure}</p>
+  <div class="column box"> 
+    <h2>Pressure</h2>
+    <h1>{weather.current.pressure} PA</h1>
   </div>
-  <div class="column"> 
-    <p>{weather.hourly.wind_speed}</p>
+  <div class="column box"> 
+    <h2>Wind speed</h2>
+    <h1>{weather.current.wind_speed} kmph</h1>
   </div>
-  <div class="column"> 
+  <div class="column box"> 
+    <h2>Wind direction</h2>
+    <h1>{weather.current.wind_deg} deg</h1>
   </div>
+
 </div>

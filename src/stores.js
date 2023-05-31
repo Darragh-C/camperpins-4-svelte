@@ -15,6 +15,13 @@ export const lastPin = writable({
   long: 0, 
 });
 
+export const currentPin = writable({ 
+  name: "",
+  lat: 0, 
+  long: 0, 
+});
+
+
 export const latestCategory = writable({});
 
 export const costType = ['Free', 'Paid'];

@@ -18,11 +18,13 @@
   import { onMount } from "svelte";
   import { setContext } from 'svelte';
   import PinWeather from '$lib/PinWeather.svelte';
+  import { currentPin } from '../../../stores';
+  import { get } from 'svelte/store';
 
 
   /** @type {import('./$types').PageData} */
   export let data;
-  const { pin } = data.pin
+  const { pin } = data
   //const { weather } = data.weather
 
   let currentPinCategories = [];
@@ -31,7 +33,11 @@
     return await camperpinsService.getCategories();
   })
   */
-  onMount (getPinCategories);
+
+  onMount(async () => {
+    getPinCategories();
+    
+  });
 
   async function getPinCategories() {
     const allCategories = await camperpinsService.getCategories();
@@ -54,9 +60,6 @@
   </div>
 </div> 
 
-<!--
-<PinWeather lat={pin.lattitude} long={pin.longitude} />
--->
 
 <div class="columns">
 	<div class="column">

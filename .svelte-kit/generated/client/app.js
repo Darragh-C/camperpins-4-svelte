@@ -25,7 +25,7 @@ export const dictionary = {
 		"/map": [7],
 		"/pin/[slug]": [~8],
 		"/signup": [9],
-		"/test": [~10]
+		"/weather": [~10]
 	};
 
 export const hooks = {
