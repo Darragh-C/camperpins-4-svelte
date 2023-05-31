@@ -8,17 +8,18 @@
   export let url = "";
 
   async function deleteImage() {
-    const success = await camperpinsService.removeImage(pinId, url);
-    if (success) {
-      dispatch('deleted');
-      console.log('image deleted!')
-    }
+    console.log(`deleting ${url}`);
+    const eventData = { img: url };
+    console.log(`deleting thie event data ${eventData.img}`)
+    dispatch('deleted', eventData);
+    console.log('image deleted!')
+    await camperpinsService.removeImage(pinId, url);
   }
 </script>
 
 
 
-<button class="button is-danger is-right" on:click={deleteImage}>
+<button class="button is-danger is-pulled-right is-small" on:click={deleteImage}>
   <span class="icon is-small">
     <i class="fas fa-times"></i>
   </span>

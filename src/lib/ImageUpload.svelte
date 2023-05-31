@@ -40,7 +40,11 @@
     imageUrl = [...imageUrl];
   }
 </script>
-<ImageGallery imageUrls={imageUrl} alt={pin.name}/>
+
+{#if pin.img.length > 0} 
+  <ImageGallery pinId={pin._id} imageUrls={imageUrl} alt={pin.name} on:deleted={clearImageUrl}/>
+{/if}
+
 <div class="card-content">
 <form on:submit|preventDefault={uploadImage}>
   <div id="file-select" class="file has-name is-fullwidth">
