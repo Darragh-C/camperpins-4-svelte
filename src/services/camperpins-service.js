@@ -5,7 +5,6 @@ import { user } from "../stores.js";
 import bcrypt from "bcryptjs";
 import { get } from 'svelte/store';
 
-const salt = await bcrypt.genSalt(10);
 
 export const camperpinsService = {
     baseUrl: "https://camperpins-hapi-2.onrender.com",
@@ -48,6 +47,8 @@ export const camperpinsService = {
 
     async signup(firstName, lastName, email, password) {
         try {
+            const salt = await bcrypt.genSalt(10);
+
             console.log('trying to sign up');
             const userDetails = {
                 firstName: firstName,

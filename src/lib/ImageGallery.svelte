@@ -32,7 +32,6 @@
 
 </script>
 
-{#if}
 <div class="box">
   <div class="has-text-centered">
     <h3 class="title is-3">{alt} images</h3>
