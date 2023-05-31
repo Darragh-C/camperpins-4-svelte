@@ -1,6 +1,6 @@
 <script>
-  import "leaflet/dist/leaflet.css";
-  //import { LeafletMap } from "../services/leaflet-map";
+  //import "leaflet/dist/leaflet.css";
+  import { LeafletMap } from "../services/leaflet-map";
   import { onMount } from "svelte";
   import { camperpinsService } from "../services/camperpins-service";
   import { dataMod } from "../services/data-mod";

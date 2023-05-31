@@ -1,6 +1,6 @@
 <script>
-  import van1 from "/src/assets/van-sun.jpg"
-  import camperpinsLogo from "/src/assets/camper-pins-logo.png"
+  import van1 from "/src/static/van-sun.jpg"
+  import camperpinsLogo from "/src/static/camper-pins-logo.png"
   import { user } from "../stores.js";
   export let title = '';
   export let subTitle = '';

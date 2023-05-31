@@ -4,7 +4,7 @@ export const manifest = {
 	assets: new Set([]),
 	mimeTypes: {},
 	_: {
-		client: {"start":"_app/immutable/entry/start.44994ad5.js","app":"_app/immutable/entry/app.69a2fc89.js","imports":["_app/immutable/entry/start.44994ad5.js","_app/immutable/chunks/index.147df613.js","_app/immutable/chunks/singletons.94c3c323.js","_app/immutable/chunks/index.88bdc188.js","_app/immutable/chunks/paths.5406ee9a.js","_app/immutable/entry/app.69a2fc89.js","_app/immutable/chunks/index.147df613.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.55d9aed0.js","app":"_app/immutable/entry/app.4f6ec6fd.js","imports":["_app/immutable/entry/start.55d9aed0.js","_app/immutable/chunks/index.147df613.js","_app/immutable/chunks/singletons.5d5af45a.js","_app/immutable/chunks/index.88bdc188.js","_app/immutable/chunks/paths.9ae8cf3f.js","_app/immutable/entry/app.4f6ec6fd.js","_app/immutable/chunks/index.147df613.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
