@@ -8,14 +8,10 @@ import { get } from 'svelte/store';
 const salt = await bcrypt.genSalt(10);
 
 export const camperpinsService = {
-    //baseUrl: "https://camperpins-hapi-2.onrender.com",http://Darraghs-MBP:4444
-    baseUrl: "http://Darraghs-MBP:4444",
+    baseUrl: "https://camperpins-hapi-2.onrender.com",
 
     async login(email, password) {
         try {
-            //console.log('making hash');
-            //const hash = await bcrypt.hashSync(password, salt);
-            //console.log('Hashed password:', hash);
             const response = await axios.post(`${this.baseUrl}/api/users/authenticate`, { email, password });
             axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.token;
             console.log(`RESPONSE.DATA.TOKEN: ${response.data.token}`);
