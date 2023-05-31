@@ -15,8 +15,9 @@
 <div class="columns box">
   {#each Object.entries(trendObject) as [key, value]}
     <div class="column">
-      <h4 class="title is-4">{weatherUtils.titleCase(weatherUtils.removeUnderscore(key))}</h4>
-      <i class={value[0]} style={value[1]} />
+      <div class="has-text-centered"><i class={value[0]} style={value[1]} /></div>
+      <br/>
+      <div class="has-text-centered"><h5 class="title is-5">{weatherUtils.titleCase(weatherUtils.removeUnderscore(key))}</h5></div>
     </div>
   {/each}
 </div>
