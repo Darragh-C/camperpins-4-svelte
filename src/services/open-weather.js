@@ -5,7 +5,7 @@ import { user } from "../stores.js";
 import bcrypt from "bcryptjs";
 import { get } from 'svelte/store';
 
-export const camperpinsService = {
+export const openWeather = {
   baseUrl: "https://api.openweathermap.org/data/2.5/onecall?",
   latParam: "lat=",
   longParam: "&lon=",
