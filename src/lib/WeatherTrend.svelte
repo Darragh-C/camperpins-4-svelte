@@ -65,6 +65,6 @@
 </script>
 
 
-<h1>Graph</h1>
+<h3 class="title is-3">Forecast graph</h3>
 <Chart {data} type="line" />
 

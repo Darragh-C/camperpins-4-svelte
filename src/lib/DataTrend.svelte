@@ -11,7 +11,7 @@
 </script>
 
 
-
+<h3 class="title is-3">Forecast</h3>
 <div class="columns box">
   {#each Object.entries(trendObject) as [key, value]}
     <div class="column">

@@ -29,18 +29,9 @@
 </div> 
 
   <h2 class="title is-2">{data.pin.name} weather</h2>
-
- 
-
   <PinWeather weatherData={data.weather} />
   <DataTrend weatherData={hourly.slice(0,3)} />
-
-  
-
   <WeatherTrend weatherData={hourly} />
 
 
-<!--
 
--->
-  

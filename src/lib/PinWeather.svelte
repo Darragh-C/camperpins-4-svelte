@@ -14,7 +14,7 @@
 
 <div class="box">
   <div class="columns is-vcentered">
-    <div class="column"> 
+    <div class="column is-one-fifth"> 
       <h3 class="title is-3">{weatherUtils.titleCase(weatherData.current.weather[0].description)}</h3>
       <img alt="weather-icon" src={iconSrc} width="100"/>
     </div>
