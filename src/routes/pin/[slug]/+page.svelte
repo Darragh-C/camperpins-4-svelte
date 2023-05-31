@@ -17,11 +17,13 @@
   import DisplayCategories from '$lib/DisplayCategories.svelte';
   import { onMount } from "svelte";
   import { setContext } from 'svelte';
+  import PinWeather from '$lib/PinWeather.svelte';
 
 
   /** @type {import('./$types').PageData} */
   export let data;
-  const { pin } = data
+  const { pin } = data.pin
+  //const { weather } = data.weather
 
   let currentPinCategories = [];
   /*
@@ -51,6 +53,10 @@
     <MainNavigator/>
   </div>
 </div> 
+
+<!--
+<PinWeather lat={pin.lattitude} long={pin.longitude} />
+-->
 
 <div class="columns">
 	<div class="column">

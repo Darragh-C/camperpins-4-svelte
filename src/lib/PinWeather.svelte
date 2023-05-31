@@ -1,34 +1,40 @@
 <script>
-  import { onMount } from "svelte/types/runtime/internal/lifecycle";
-  import { openWeather } from "../services/open-weather";
+  import { onMount } from "svelte";
 
-  export let lat;
-  export let long;
-  let latestWeather = {};
+  /** @type {import('./$types').PageData} */
+  export let data;
+  const { weather } = data
 
-  onMount(getLatestWeather);
+  //export let lat;
+  //export let long;
+  //let latestWeather = {};
+  //lat, long
 
-  async function getLatestWeather() {
-    latestWeather = await openWeather.getWeather(lat, long);
-  }
+  //onMount(getLatestWeather);
+
+  //async function getLatestWeather() {
+  //  latestWeather = await openWeather.getWeather();
+  //  console.log(latestWeather);
+  //}
 
 </script>
 
+
 <div class="columns">
   <div class="column"> 
-    <p>{latestWeather.current.weather.description}</p>
+    <p>{weather.current.weather.description}</p>
   </div>
   <div class="column"> 
-    <p>{latestWeather.current.temp}</p>
+    <p>{weather.current.temp}</p>
   </div>
   <div class="column"> 
-    <p>{latestWeather.current.humidity}</p>
+    <p>{weather.current.humidity}</p>
   </div>
   <div class="column"> 
-    <p>{latestWeather.current.pressure}</p>
+    <p>{weather.current.pressure}</p>
   </div>
   <div class="column"> 
-    <p>{latestWeather.hourly.wind_speed}</p>
+    <p>{weather.hourly.wind_speed}</p>
   </div>
   <div class="column"> 
   </div>
