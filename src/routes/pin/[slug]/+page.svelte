@@ -91,10 +91,7 @@
         </div>
         <div class="column is-one-third">
           <PinCoordinates lat={pin.lattitude} long={pin.longitude} />
-          <AddCategory pinId={pin._id} {currentPinCategories} {updateArray} />
-          
-          
-          
+          <AddCategory pinId={pin._id} {currentPinCategories} {updateArray} /> 
         </div>
     </div>   
 </div>

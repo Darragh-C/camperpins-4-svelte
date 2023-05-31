@@ -3,7 +3,8 @@
   import DeleteImage from "./DeleteImage.svelte";
   import DisplayImage from "./DisplayImage.svelte";
   import { createEventDispatcher } from 'svelte';
-  const dispatch = createEventDispatcher();
+  import ImageGallery from "./ImageGallery.svelte";
+  
   
 
   export let pin; 
@@ -39,12 +40,7 @@
     imageUrl = [...imageUrl];
   }
 </script>
-
-
-
-
-
-
+<ImageGallery imageUrls={imageUrl} alt={pin.name}/>
 <div class="card-content">
 <form on:submit|preventDefault={uploadImage}>
   <div id="file-select" class="file has-name is-fullwidth">
@@ -66,16 +62,17 @@
 </div>
 
 
-
+<!--
 {#if imageUrl[0]}
   <div >
     <div class="columns is-multiline is-mobile">
       {#each imageUrl as url}
         <div class="column">
           <DeleteImage pinId={pin._id} url={url} on:deleted={clearImageUrl(url)} />
-          <DisplayImage imageUrl={url} alt={pin.name}/>
+          <ImageGallery imageUrl={url} alt={pin.name}/>
         </div>
       {/each}
     </div>
   </div> 
 {/if} 
+-->

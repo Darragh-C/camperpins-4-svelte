@@ -4,7 +4,7 @@
 </script>
 
 <div class="card-image">
-  <figure class="image is-150x150">
+  <figure class="image is-100x100">
       <img alt={`Image of ${alt}`} src={imageUrl}>
   </figure>
 </div>
