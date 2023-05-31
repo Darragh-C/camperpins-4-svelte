@@ -1,4 +1,5 @@
 <script>
+  import { weatherUtils } from "../services/weather-utils";
 
   export let weatherData = {};
 
@@ -14,7 +15,7 @@
 <div class="box">
   <div class="columns is-vcentered">
     <div class="column"> 
-      <h3 class="title is-3">{weatherData.current.weather[0].description}</h3>
+      <h3 class="title is-3">{weatherUtils.titleCase(weatherData.current.weather[0].description)}</h3>
       <img alt="weather-icon" src={iconSrc} width="100"/>
     </div>
     <div class="column"> 

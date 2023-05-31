@@ -1,6 +1,7 @@
 <script>
 
   import ChartTemplate from "$lib/ChartTemplate.svelte";
+    import DataTrend from "$lib/DataTrend.svelte";
   import MainNavigator from "$lib/MainNavigator.svelte";
   import PinWeather from "$lib/PinWeather.svelte";
   import TitleBar from '$lib/TitleBar.svelte';
@@ -12,6 +13,7 @@
 
   const icon = data.weather.current.weather[0].icon;
   const hourly = data.weather.hourly;
+
 
   const iconSrc = `https://openweathermap.org/img/wn/${icon}@2x.png`
 
@@ -28,9 +30,16 @@
 
   <h2 class="title is-2">{data.pin.name} weather</h2>
 
+ 
+
   <PinWeather weatherData={data.weather} />
+  <DataTrend weatherData={hourly.slice(0,3)} />
+
+  
 
   <WeatherTrend weatherData={hourly} />
+
+
 <!--
 
 -->
